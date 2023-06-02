@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Consultar Histórico Nómina - Manual de la Aplicación de Gestión de Nóminas</title>
+  <style>
+       body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff; /* Cambiado a color blanco */
+    }
+
+    #banner {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    #navbar {
+      background-color: #666;
+      color: #fff;
+      padding: 10px;
+    }
+
+    #navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    #navbar ul li {
+      display: inline-block;
+      margin-right: 10px;
+      position: relative;
+    }
+
+    #navbar ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    #content {
+      padding: 20px;
+      background-color: #fff;
+      margin: 20px;
+    }
+
+    h2 {
+      color: #333;
+      margin-top: 0;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .image-container img {
+      display: block;
+      max-width: 100%;
+      margin: 20px auto;
+    }
+
+    #language-buttons {
+      text-align: right;
+    }
+
+    #language-buttons button {
+      margin-left: 5px;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Estilo para el menú desplegable */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #666;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+
+      z-index: 1;
+      text-align: left;
+
+      /*margin-top: 10px;*/
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+  </style>
+  <script>
+    function cambiarIdioma(idioma) {
+      var htmlElement = document.querySelector('html');
+      htmlElement.lang = idioma;
+
+      // Traducir elementos de la barra de navegación
+      if (idioma === 'es') {
+        document.getElementById('navbar-inicio').textContent = 'Inicio';
+        document.getElementById('nav-trabajadores').textContent = 'Trabajadores';
+        document.getElementById('nav-trabajadores-crear').textContent = 'Crear';
+        document.getElementById('nav-trabajadores-eliminar').textContent = 'Eliminar';
+        document.getElementById('nav-trabajadores-consultar').textContent = 'Consultar';
+        document.getElementById('nav-trabajadores-modificar').textContent = 'Modificar';
+
+        document.getElementById('nav-calcular-nomina').textContent = 'Nómina';
+        document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calcular';
+        document.getElementById('nav-calcular-nomina-consultar').textContent = 'Consultar';
+        document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Eliminar';
+
+        document.getElementById('nav-consultar-historico').textContent = 'Histórico Nómina';
+        document.getElementById('nav-consultar-historico-crear').textContent = 'Crear';
+        document.getElementById('nav-consultar-historico-consultar').textContent = 'Consultar';
+
+        document.getElementById('nav-gestion-interna').textContent = 'Gestión Interna';
+        document.getElementById('nav-gestion-interna-departamento').textContent = 'Departamento';
+        document.getElementById('nav-gestion-interna-percepciones').textContent = 'Percepciones';
+        document.getElementById('nav-gestion-interna-contingencias').textContent = 'Contingencias';
+        document.getElementById('nav-gestion-interna-retenciones').textContent = 'Retenciones';
+
+        document.getElementById('nav-ajustes').textContent = 'Ajustes';
+        document.getElementById('nav-ajustes-idioma').textContent = 'Idioma';
+        document.getElementById('nav-ajustes-basededatos').textContent = 'Base de Datos';
+
+        document.getElementById('banner-text').textContent = 'Gestión Nóminas';
+
+        // Traducir el título y la descripción de "Consultar Histórico Nómina"
+        document.getElementById('consultar-historico-title').textContent = 'Consultar Histórico Nómina';
+        document.getElementById('consultar-historico-description').textContent = 'En la sección "Histórico Nómina" podrás acceder al registro histórico de las nóminas generadas. Podrás buscar y consultar nóminas anteriores, ver los detalles de cada una y generar informes.';
+      } else if (idioma === 'en') {
+        document.getElementById('navbar-inicio').textContent = 'Home';
+        document.getElementById('nav-trabajadores').textContent = 'Employees';
+        document.getElementById('nav-trabajadores-crear').textContent = 'Create';
+        document.getElementById('nav-trabajadores-eliminar').textContent = 'Delete';
+        document.getElementById('nav-trabajadores-consultar').textContent = 'View';
+        document.getElementById('nav-trabajadores-modificar').textContent = 'Modify';
+
+        document.getElementById('nav-calcular-nomina').textContent = 'Payroll';
+        document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calculate';
+        document.getElementById('nav-calcular-nomina-consultar').textContent = 'View';
+        document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Delete';
+
+        document.getElementById('nav-consultar-historico').textContent = 'Payroll History';
+        document.getElementById('nav-consultar-historico-crear').textContent = 'Create';
+        document.getElementById('nav-consultar-historico-consultar').textContent = 'View';
+
+        document.getElementById('nav-gestion-interna').textContent = 'Internal Management';
+        document.getElementById('nav-gestion-interna-departamento').textContent = 'Department';
+        document.getElementById('nav-gestion-interna-percepciones').textContent = 'Perceptions';
+        document.getElementById('nav-gestion-interna-contingencias').textContent = 'Contingencies';
+        document.getElementById('nav-gestion-interna-retenciones').textContent = 'Deductions';
+
+        document.getElementById('nav-ajustes').textContent = 'Settings';
+        document.getElementById('nav-ajustes-idioma').textContent = 'Language';
+        document.getElementById('nav-ajustes-basededatos').textContent = 'Database';
+
+        document.getElementById('banner-text').textContent = 'Payroll Management';
+
+        // Traducir el título y la descripción de "Consultar Histórico Nómina"
+        document.getElementById('consultar-historico-title').textContent = 'History';
+        document.getElementById('consultar-historico-description').textContent = 'In the "Payroll History" section, you can access the historical record of generated payrolls. You can search and view previous payrolls, see the details of each one, and generate reports.';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="banner">
+    <h1 id="banner-text">Gestión Nóminas</h1>
+    <div id="language-buttons">
+      <button onclick="cambiarIdioma('es')">Español</button>
+      <button onclick="cambiarIdioma('en')">English</button>
+    </div>
+  </div>
+
+  <div id="navbar">
+    <ul>
+      <li><a id="navbar-inicio" href="../index.html">Inicio</a></li>
+      <li class="dropdown">
+        <a href="../Trabajador/trabajadores.html" id="nav-trabajadores">Trabajadores</a>
+        <div class="dropdown-content">
+          <a href="../Trabajador/crearTrabajador.html" id="nav-trabajadores-crear">Crear</a>
+          <a href="../Trabajador/eliminarTrabajador.html" id="nav-trabajadores-eliminar">Eliminar</a>
+          <a href="../Trabajador/consultarTrabajador.html" id="nav-trabajadores-consultar">Consultar</a>
+          <a href="../Trabajador/modificarTrabajador.html" id="nav-trabajadores-modificar">Modificar</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="../Nomina/nomina.html" id="nav-calcular-nomina">Nómina</a>
+        <div class="dropdown-content">
+          <a href="../Nomina/calcularNomina.html" id="nav-calcular-nomina-calcular">Calcular</a>
+          <a href="../Nomina/consultarNomina.html" id="nav-calcular-nomina-consultar">Consultar</a>
+          <a href="../Nomina/eliminarNomina.html" id="nav-calcular-nomina-eliminar">Eliminar</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="historico.html" id="nav-consultar-historico">Histórico Nómina</a>
+        <div class="dropdown-content">
+          <a href="crearHistorico.html" id="nav-consultar-historico-crear">Crear</a>
+          <a href="consultarHistorico.html" id="nav-consultar-historico-consultar">Consultar</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="../GestionInterna/gestion-interna.html" id="nav-gestion-interna">Gestión Interna</a>
+        <div class="dropdown-content">
+          <a href="../GestionInterna/Departamentos.html" id="nav-gestion-interna-departamento">Departamento</a>
+          <a href="../GestionInterna/Percepciones.html" id="nav-gestion-interna-percepciones">Percepciones</a>
+          <a href="../GestionInterna/Contingencias.html" id="nav-gestion-interna-contingencias">Contingencias</a>
+          <a href="../GestionInterna/Reteneciones.html" id="nav-gestion-interna-retenciones">Retenciones</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="../Ajustes/ajustes.html" id="nav-ajustes">Ajustes</a>
+        <div class="dropdown-content">
+          <a  href="../Ajustes/Idioma.html" id="nav-ajustes-idioma" >Idioma</a>
+          <a href="../Ajustes/BBDD.html" id="nav-ajustes-basededatos">Base de Datos</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div id="content">
+    <h2 id="consultar-historico-title">Histórico Nómina</h2>
+    <p id="consultar-historico-description">En la sección "Histórico Nómina" podrás acceder al registro histórico de las nóminas generadas. Podrás buscar y consultar nóminas anteriores, ver los detalles de cada una y generar informes.</p>
+    <div class="image-container">
+      <img src="../images/hnominas.png" width="1200" height="700">
+    </div>
+  </div></body>
+</html>

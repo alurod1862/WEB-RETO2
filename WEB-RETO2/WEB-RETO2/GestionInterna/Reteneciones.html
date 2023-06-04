@@ -113,79 +113,92 @@
     padding: 10px;
   }
   </style>
-  <script>
-    function cambiarIdioma(idioma) {
-      var htmlElement = document.querySelector('html');
-      htmlElement.lang = idioma;
+<script>
+  function cambiarIdioma(idioma) {
+    var htmlElement = document.querySelector('html');
+    htmlElement.lang = idioma;
 
-      // Traducir elementos de la barra de navegación
-      if (idioma === 'es') {
-        document.getElementById('navbar-inicio').textContent = 'Inicio';
-        document.getElementById('nav-trabajadores').textContent = 'Trabajadores';
-        document.getElementById('nav-trabajadores-crear').textContent = 'Crear';
-        document.getElementById('nav-trabajadores-eliminar').textContent = 'Eliminar';
-        document.getElementById('nav-trabajadores-consultar').textContent = 'Consultar';
-        document.getElementById('nav-trabajadores-modificar').textContent = 'Modificar';
+    // Traducir elementos de la barra de navegación
+    if (idioma === 'es') {
+      document.getElementById('navbar-inicio').textContent = 'Inicio';
+      document.getElementById('nav-trabajadores').textContent = 'Trabajadores';
+      document.getElementById('nav-trabajadores-crear').textContent = 'Crear';
+      document.getElementById('nav-trabajadores-eliminar').textContent = 'Eliminar';
+      document.getElementById('nav-trabajadores-consultar').textContent = 'Consultar';
+      document.getElementById('nav-trabajadores-modificar').textContent = 'Modificar';
 
-        document.getElementById('nav-calcular-nomina').textContent = 'Nómina';
-        document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calcular';
-        document.getElementById('nav-calcular-nomina-consultar').textContent = 'Consultar';
-        document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Eliminar';
+      document.getElementById('nav-calcular-nomina').textContent = 'Nómina';
+      document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calcular';
+      document.getElementById('nav-calcular-nomina-consultar').textContent = 'Consultar';
+      document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Eliminar';
 
-        document.getElementById('nav-consultar-historico').textContent = 'Histórico Nómina';
-        document.getElementById('nav-consultar-historico-crear').textContent = 'Crear';
-        document.getElementById('nav-consultar-historico-consultar').textContent = 'Consultar';
+      document.getElementById('nav-consultar-historico').textContent = 'Histórico Nómina';
+      document.getElementById('nav-consultar-historico-crear').textContent = 'Crear';
+      document.getElementById('nav-consultar-historico-consultar').textContent = 'Consultar';
 
-        document.getElementById('nav-gestion-interna').textContent = 'Gestión Interna';
-        document.getElementById('nav-gestion-interna-departamento').textContent = 'Departamento';
-        document.getElementById('nav-gestion-interna-percepciones').textContent = 'Percepciones';
-        document.getElementById('nav-gestion-interna-contingencias').textContent = 'Contingencias';
-        document.getElementById('nav-gestion-interna-retenciones').textContent = 'Retenciones';
+      document.getElementById('nav-gestion-interna').textContent = 'Gestión Interna';
+      document.getElementById('nav-gestion-interna-departamento').textContent = 'Departamento';
+      document.getElementById('nav-gestion-interna-percepciones').textContent = 'Percepciones';
+      document.getElementById('nav-gestion-interna-contingencias').textContent = 'Retenciones';
+      document.getElementById('nav-gestion-interna-retenciones').textContent = 'Retenciones';
 
-        document.getElementById('nav-ajustes').textContent = 'Ajustes';
-        document.getElementById('nav-ajustes-idioma').textContent = 'Idioma';
-        document.getElementById('nav-ajustes-basededatos').textContent = 'Base de Datos';
+      document.getElementById('nav-ajustes').textContent = 'Ajustes';
+      document.getElementById('nav-ajustes-idioma').textContent = 'Idioma';
+      document.getElementById('nav-ajustes-basededatos').textContent = 'Base de Datos';
 
-        document.getElementById('banner-text').textContent = 'Gestión Nóminas';
+      document.getElementById('banner-text').textContent = 'Gestión Nóminas';
 
-        // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
-      } else if (idioma === 'en') {
-        document.getElementById('navbar-inicio').textContent = 'Home';
-        document.getElementById('nav-trabajadores').textContent = 'Employees';
-        document.getElementById('nav-trabajadores-crear').textContent = 'Create';
-        document.getElementById('nav-trabajadores-eliminar').textContent = 'Delete';
-        document.getElementById('nav-trabajadores-consultar').textContent = 'View';
-        document.getElementById('nav-trabajadores-modificar').textContent = 'Modify';
+      // Traducción del contenido principal
+      document.getElementById('ajustes-title').textContent = '';
+      document.getElementById('ajustes-description').textContent = '';
+      document.getElementById('ajustes-title').textContent = 'Gestión de Retecciones';
+      document.getElementById('ajustes-description').textContent = 'En esta sección puedes gestionar las percepciones.';
+      document.getElementById('text-add-retencion').textContent = 'Añadir Retención - Permite agregar una nueva retención al sistema.';
+      document.getElementById('text-consult-retencion').textContent = 'Consultar Retención - Permite visualizar la información detallada de una retención existente.';
+      document.getElementById('text-modify-retencion').textContent = 'Modificar Retención - Permite seleccionar y modificar una retención existente en el sistema.';
+      document.getElementById('text-delete-retencion').textContent = 'Eliminar Retenecion - Permite eliminar una retención del sistema para ello tenemos que selecionarla..';
+    } else if (idioma === 'en') {
+      document.getElementById('navbar-inicio').textContent = 'Home';
+      document.getElementById('nav-trabajadores').textContent = 'Employees';
+      document.getElementById('nav-trabajadores-crear').textContent = 'Create';
+      document.getElementById('nav-trabajadores-eliminar').textContent = 'Delete';
+      document.getElementById('nav-trabajadores-consultar').textContent = 'View';
+      document.getElementById('nav-trabajadores-modificar').textContent = 'Modify';
 
-        document.getElementById('nav-calcular-nomina').textContent = 'Payroll';
-        document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calculate';
-        document.getElementById('nav-calcular-nomina-consultar').textContent = 'View';
-        document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Delete';
+      document.getElementById('nav-calcular-nomina').textContent = 'Payroll';
+      document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calculate';
+      document.getElementById('nav-calcular-nomina-consultar').textContent = 'View';
+      document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Delete';
 
-        document.getElementById('nav-consultar-historico').textContent = 'Payroll History';
-        document.getElementById('nav-consultar-historico-crear').textContent = 'Create';
-        document.getElementById('nav-consultar-historico-consultar').textContent = 'View';
+      document.getElementById('nav-consultar-historico').textContent = 'Payroll History';
+      document.getElementById('nav-consultar-historico-crear').textContent = 'Create';
+      document.getElementById('nav-consultar-historico-consultar').textContent = 'View';
 
-        document.getElementById('nav-gestion-interna').textContent = 'Internal Management';
-        document.getElementById('nav-gestion-interna-departamento').textContent = 'Department';
-        document.getElementById('nav-gestion-interna-percepciones').textContent = 'Perceptions';
-        document.getElementById('nav-gestion-interna-contingencias').textContent = 'Contingencies';
-        document.getElementById('nav-gestion-interna-retenciones').textContent = 'Deductions';
+      document.getElementById('nav-gestion-interna').textContent = 'Internal Management';
+      document.getElementById('nav-gestion-interna-departamento').textContent = 'Department';
+      document.getElementById('nav-gestion-interna-percepciones').textContent = 'Perceptions';
+      document.getElementById('nav-gestion-interna-contingencias').textContent = 'Deductions';
+      document.getElementById('nav-gestion-interna-retenciones').textContent = 'Deductions';
 
-        document.getElementById('nav-ajustes').textContent = 'Settings';
-        document.getElementById('nav-ajustes-idioma').textContent = 'Language';
-        document.getElementById('nav-ajustes-basededatos').textContent = 'Database';
+      document.getElementById('nav-ajustes').textContent = 'Settings';
+      document.getElementById('nav-ajustes-idioma').textContent = 'Language';
+      document.getElementById('nav-ajustes-basededatos').textContent = 'Database';
 
-        document.getElementById('banner-text').textContent = 'Payroll Management';
+      document.getElementById('banner-text').textContent = 'Payroll Management';
 
-        // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
-      }
+      // Traducción del contenido principal
+      document.getElementById('ajustes-title').textContent = '';
+      document.getElementById('ajustes-description').textContent = '';
+      document.getElementById('ajustes-title').textContent = 'Deduction Management';
+      document.getElementById('ajustes-description').textContent = 'In this section, you can manage perceptions.';
+      document.getElementById('text-add-retencion').textContent = 'Add Deduction - Allows you to add a new deduction to the system.';
+      document.getElementById('text-consult-retencion').textContent = 'View Deduction - Allows you to view detailed information about an existing deduction.';
+      document.getElementById('text-modify-retencion').textContent = 'Modify Deduction - Allows you to select and modify an existing deduction in the system.';
+      document.getElementById('text-delete-retencion').textContent = 'Delete Deduction - Allows you to remove a deduction from the system but first we need to select them before.';
     }
-  </script>
+  }
+</script>
+
 </head>
 <body>
   <div id="banner">
@@ -243,18 +256,19 @@
 
   <div id="content">
     <h2 id="ajustes-title">Gestion Reteneciones</h2>
-    <p id="ajustes-description">Gestionar las retenciones</p>
-      <div class="image-container">
-        <img src="../images/ORetenciones.png" width="1200" height="700">
-        <div class="image-text">Añadir Retencion</div>
-        <img src="../images/AR.png" width="1200" height="700">
-        <div class="image-text">Consultar Retenecion</div>
-        <img src="../images/CR.png" width="1200" height="700">
-        <div class="image-text">Modificar Retenecion</div>
-        <img src="../images/MR.png" width="1200" height="700">
-        <div class="image-text">Eliminar Retenecion</div>
-        <img src="../images/ER.png" width="1200" height="700">
-      </div>
-    </div>  
+    <p id="ajustes-description">En esta sección puedes gestionar las percepciones.</p>
+    <div class="image-container">
+      <img src="../images/ORetenciones.png" width="1200" height="700">
+      <div id="text-add-retencion" class="image-text">Añadir Retencion - Permite agregar una nueva retención al sistema.</div>
+      <img src="../images/AR.png" width="1200" height="700">
+      <div id="text-consult-retencion" class="image-text">Consultar Retenecion - Permite visualizar la información detallada de una retención existente.</div>
+      <img src="../images/CR.png" width="1200" height="700">
+      <div id="text-modify-retencion" class="image-text">Modificar Retenecion - Permite seleccionar y modificar una retención existente en el sistema.</div>
+      <img src="../images/MR.png" width="1200" height="700">
+      <div id="text-delete-retencion" class="image-text">Eliminar Retenecion - Permite eliminar una retención del sistema para ello tenemos que selecionarla.</div>
+      <img src="../images/ER.png" width="1200" height="700">
+    </div>
+  </div>
+  
 </body>
 </html>

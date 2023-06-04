@@ -113,79 +113,87 @@
     padding: 10px;
   }
   </style>
-  <script>
-    function cambiarIdioma(idioma) {
-      var htmlElement = document.querySelector('html');
-      htmlElement.lang = idioma;
+<script>
+  function cambiarIdioma(idioma) {
+    var htmlElement = document.querySelector('html');
+    htmlElement.lang = idioma;
 
-      // Traducir elementos de la barra de navegación
-      if (idioma === 'es') {
-        document.getElementById('navbar-inicio').textContent = 'Inicio';
-        document.getElementById('nav-trabajadores').textContent = 'Trabajadores';
-        document.getElementById('nav-trabajadores-crear').textContent = 'Crear';
-        document.getElementById('nav-trabajadores-eliminar').textContent = 'Eliminar';
-        document.getElementById('nav-trabajadores-consultar').textContent = 'Consultar';
-        document.getElementById('nav-trabajadores-modificar').textContent = 'Modificar';
+    // Traducir elementos de la barra de navegación
+    if (idioma === 'es') {
+      document.getElementById('navbar-inicio').textContent = 'Inicio';
+      document.getElementById('nav-trabajadores').textContent = 'Trabajadores';
+      document.getElementById('nav-trabajadores-crear').textContent = 'Crear';
+      document.getElementById('nav-trabajadores-eliminar').textContent = 'Eliminar';
+      document.getElementById('nav-trabajadores-consultar').textContent = 'Consultar';
+      document.getElementById('nav-trabajadores-modificar').textContent = 'Modificar';
 
-        document.getElementById('nav-calcular-nomina').textContent = 'Nómina';
-        document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calcular';
-        document.getElementById('nav-calcular-nomina-consultar').textContent = 'Consultar';
-        document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Eliminar';
+      document.getElementById('nav-calcular-nomina').textContent = 'Nómina';
+      document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calcular';
+      document.getElementById('nav-calcular-nomina-consultar').textContent = 'Consultar';
+      document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Eliminar';
 
-        document.getElementById('nav-consultar-historico').textContent = 'Histórico Nómina';
-        document.getElementById('nav-consultar-historico-crear').textContent = 'Crear';
-        document.getElementById('nav-consultar-historico-consultar').textContent = 'Consultar';
+      document.getElementById('nav-consultar-historico').textContent = 'Histórico Nómina';
+      document.getElementById('nav-consultar-historico-crear').textContent = 'Crear';
+      document.getElementById('nav-consultar-historico-consultar').textContent = 'Consultar';
 
-        document.getElementById('nav-gestion-interna').textContent = 'Gestión Interna';
-        document.getElementById('nav-gestion-interna-departamento').textContent = 'Departamento';
-        document.getElementById('nav-gestion-interna-percepciones').textContent = 'Percepciones';
-        document.getElementById('nav-gestion-interna-contingencias').textContent = 'Contingencias';
-        document.getElementById('nav-gestion-interna-retenciones').textContent = 'Retenciones';
+      document.getElementById('nav-gestion-interna').textContent = 'Gestión Interna';
+      document.getElementById('nav-gestion-interna-departamento').textContent = 'Departamento';
+      document.getElementById('nav-gestion-interna-percepciones').textContent = 'Percepciones';
+      document.getElementById('nav-gestion-interna-contingencias').textContent = 'Contingencias';
+      document.getElementById('nav-gestion-interna-retenciones').textContent = 'Retenciones';
 
-        document.getElementById('nav-ajustes').textContent = 'Ajustes';
-        document.getElementById('nav-ajustes-idioma').textContent = 'Idioma';
-        document.getElementById('nav-ajustes-basededatos').textContent = 'Base de Datos';
+      document.getElementById('nav-ajustes').textContent = 'Ajustes';
+      document.getElementById('nav-ajustes-idioma').textContent = 'Idioma';
+      document.getElementById('nav-ajustes-basededatos').textContent = 'Base de Datos';
 
-        document.getElementById('banner-text').textContent = 'Gestión Nóminas';
+      document.getElementById('banner-text').textContent = 'Gestión Nóminas';
 
-        // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
-      } else if (idioma === 'en') {
-        document.getElementById('navbar-inicio').textContent = 'Home';
-        document.getElementById('nav-trabajadores').textContent = 'Employees';
-        document.getElementById('nav-trabajadores-crear').textContent = 'Create';
-        document.getElementById('nav-trabajadores-eliminar').textContent = 'Delete';
-        document.getElementById('nav-trabajadores-consultar').textContent = 'View';
-        document.getElementById('nav-trabajadores-modificar').textContent = 'Modify';
+      // Traducción del contenido principal
+      document.getElementById('ajustes-title').textContent = 'Gestión de Percepciones';
+      document.getElementById('ajustes-description').textContent = 'En esta sección puedes gestionar las percepciones.';
+      document.getElementById('text-add-contingency').textContent = 'Añadir Percepción - Permite agregar una nueva percepción al sistema. Requiere rellenar los campos correspondientes.';
+      document.getElementById('text-edit-contingency').textContent = 'Modificar Percepción - Permite seleccionar una percepción existente y modificar sus campos.';
+      document.getElementById('text-view-contingency').textContent = 'Consultar Percepción - Permite visualizar la información detallada de una percepción existente.';
+      document.getElementById('text-delete-contingency').textContent = 'Eliminar Percepción - Permite eliminar una percepción del sistema. Requiere seleccionar el elemento correspondiente.';
+    } else if (idioma === 'en') {
+      document.getElementById('navbar-inicio').textContent = 'Home';
+      document.getElementById('nav-trabajadores').textContent = 'Employees';
+      document.getElementById('nav-trabajadores-crear').textContent = 'Create';
+      document.getElementById('nav-trabajadores-eliminar').textContent = 'Delete';
+      document.getElementById('nav-trabajadores-consultar').textContent = 'View';
+      document.getElementById('nav-trabajadores-modificar').textContent = 'Modify';
 
-        document.getElementById('nav-calcular-nomina').textContent = 'Payroll';
-        document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calculate';
-        document.getElementById('nav-calcular-nomina-consultar').textContent = 'View';
-        document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Delete';
+      document.getElementById('nav-calcular-nomina').textContent = 'Payroll';
+      document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calculate';
+      document.getElementById('nav-calcular-nomina-consultar').textContent = 'View';
+      document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Delete';
 
-        document.getElementById('nav-consultar-historico').textContent = 'Payroll History';
-        document.getElementById('nav-consultar-historico-crear').textContent = 'Create';
-        document.getElementById('nav-consultar-historico-consultar').textContent = 'View';
+      document.getElementById('nav-consultar-historico').textContent = 'Payroll History';
+      document.getElementById('nav-consultar-historico-crear').textContent = 'Create';
+      document.getElementById('nav-consultar-historico-consultar').textContent = 'View';
 
-        document.getElementById('nav-gestion-interna').textContent = 'Internal Management';
-        document.getElementById('nav-gestion-interna-departamento').textContent = 'Department';
-        document.getElementById('nav-gestion-interna-percepciones').textContent = 'Perceptions';
-        document.getElementById('nav-gestion-interna-contingencias').textContent = 'Contingencies';
-        document.getElementById('nav-gestion-interna-retenciones').textContent = 'Deductions';
+      document.getElementById('nav-gestion-interna').textContent = 'Internal Management';
+      document.getElementById('nav-gestion-interna-departamento').textContent = 'Department';
+      document.getElementById('nav-gestion-interna-percepciones').textContent = 'Perceptions';
+      document.getElementById('nav-gestion-interna-contingencias').textContent = 'Contingencies';
+      document.getElementById('nav-gestion-interna-retenciones').textContent = 'Deductions';
 
-        document.getElementById('nav-ajustes').textContent = 'Settings';
-        document.getElementById('nav-ajustes-idioma').textContent = 'Language';
-        document.getElementById('nav-ajustes-basededatos').textContent = 'Database';
+      document.getElementById('nav-ajustes').textContent = 'Settings';
+      document.getElementById('nav-ajustes-idioma').textContent = 'Language';
+      document.getElementById('nav-ajustes-basededatos').textContent = 'Database';
 
-        document.getElementById('banner-text').textContent = 'Payroll Management';
+      document.getElementById('banner-text').textContent = 'Payroll Management';
 
-        // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
-      }
+      // Traducción del contenido principal
+      document.getElementById('ajustes-title').textContent = 'Perception Management';
+      document.getElementById('ajustes-description').textContent = 'In this section, you can manage perceptions.';
+      document.getElementById('text-add-contingency').textContent = 'Add Perception - Allows you to add a new perception to the system. Requires filling in the corresponding fields.';
+      document.getElementById('text-edit-contingency').textContent = 'Edit Perception - Allows you to select an existing perception and modify its fields.';
+      document.getElementById('text-view-contingency').textContent = 'View Perception - Allows you to view detailed information about an existing perception.';
+      document.getElementById('text-delete-contingency').textContent = 'Delete Perception - Allows you to remove a perception from the system. Requires selecting the corresponding item.';
     }
-  </script>
+  }
+</script>
 </head>
 <body>
   <div id="banner">
@@ -240,21 +248,21 @@
       </li>
     </ul>
   </div>
-
   <div id="content">
-    <h2 id="ajustes-title">Gestion Percepciones</h2>
+    <h2 id="ajustes-title">Gestión de Percepciones</h2>
     <p id="ajustes-description">Gestionar Percepciones</p>
-      <div class="image-container">
-        <img src="../images/OPercepciones.png" width="1200" height="700">
-        <div class="image-text">Añadir Percepcion</div>
-        <img src="../images/AP.png" width="1200" height="700">
-        <div class="image-text">Consultar Percepcion</div>
-        <img src="../images/CP.png" width="1200" height="700">
-        <div class="image-text">Modificar Percepcion</div>
-        <img src="../images/MP.png" width="1200" height="700">
-        <div class="image-text">Eliminar Percepcion</div>
-        <img src="../images/EP.png" width="1200" height="700">
-      </div>
-    </div>  
+    <div class="image-container">
+      <img src="../images/OPercepciones.png" width="1200" height="700">
+      <div class="image-text" id="text-add-contingency">Añadir Percepción - Permite agregar una nueva percepción al sistema. Requiere rellenar los campos correspondientes.</div>
+      <img src="../images/AP.png" width="1200" height="700">
+      <div class="image-text" id="text-view-contingency">Consultar Percepción - Permite visualizar la información detallada de una percepción existente.</div>
+      <img src="../images/CP.png" width="1200" height="700">
+      <div class="image-text" id="text-edit-contingency">Modificar Percepción - Permite seleccionar una percepción existente y modificar sus campos.</div>
+      <img src="../images/MP.png" width="1200" height="700">
+      <div class="image-text" id="text-delete-contingency">Eliminar Percepción - Permite eliminar una percepción del sistema. Requiere seleccionar el elemento correspondiente.</div>
+      <img src="../images/EP.png" width="1200" height="700">
+    </div>
+  </div>
+  
 </body>
 </html>

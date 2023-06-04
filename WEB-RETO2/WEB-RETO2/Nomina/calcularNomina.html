@@ -145,8 +145,10 @@
         document.getElementById('banner-text').textContent = 'Gestión Nóminas';
 
         // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
+        document.getElementById('ajustes-title').textContent = 'Calcular Nómina';
+        document.getElementById('ajustes-description').textContent = 'Para calcular la nómina, puede hacerlo por trabajador, departamento o todos. Seleccione sobre qué desea realizar el cálculo.';
+        document.getElementById('image-text-1').textContent = 'Para ello disponemos de esta ventana donde nos mostrará el trabajador o departamento';
+        document.getElementById('image-text-2').textContent = 'Y una vez creada se nos mostrará esto como prueba';
       } else if (idioma === 'en') {
         document.getElementById('navbar-inicio').textContent = 'Home';
         document.getElementById('nav-trabajadores').textContent = 'Employees';
@@ -176,11 +178,12 @@
 
         document.getElementById('banner-text').textContent = 'Payroll Management';
 
-        // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
+        document.getElementById('ajustes-title').textContent = 'Calculate Payroll';
+        document.getElementById('ajustes-description').textContent = 'To calculate the payroll, you can do it by employee, department, or all. Select what you want to calculate.';
+        document.getElementById('image-text-1').textContent = 'For that, we have this window that will show us the employee or department';
+        document.getElementById('image-text-2').textContent = 'And once created, it will be displayed to us as a test';
+  }
       }
-    }
   </script>
 </head>
 <body>
@@ -238,11 +241,14 @@
   </div>
 
   <div id="content">
-    <h2 id="ajustes-title"></h2>
-    <p id="ajustes-description"></p>
+    <h2 id="ajustes-title">Calcular Nómina</h2>
+    <p id="ajustes-description">Para calcular la nómina, puede hacerlo por trabajador, departamento o todas. Seleccione sobre qué desea realizar el cálculo.</p>
       <div class="image-container">
         <img src="../images/CNomina.png" width="1200" height="700">
-        <img src="../images/" width="1200" height="700">
+        <div id="image-text-1" class="image-text">Para ello disponemos de esta ventana donde nos mostrara el trabajador o departamento</div>
+        <img src="../images/CaTNomina.png" width="1200" height="700">
+        <div id="image-text-2" class="image-text">Y una vez creada se nos mostrara esto como prueba</div>
+        <img src="../images/2.png" width="1200" height="700">
       </div>
     </div>  
 </body>

@@ -145,8 +145,9 @@
         document.getElementById('banner-text').textContent = 'Gestión Nóminas';
 
         // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
+        document.getElementById('ajustes-title').textContent = 'Consulta Historico Nominas';
+        document.getElementById('ajustes-description').textContent = 'Para Consultar el Historico de nominas tendremos que selecionar si por persona o por departamento';
+        document.getElementById('ajustes-description-1').textContent = 'Por utltimo para poder ahcer la consulta tendremos que selecionar el nombre del departamento o empleado';
       } else if (idioma === 'en') {
         document.getElementById('navbar-inicio').textContent = 'Home';
         document.getElementById('nav-trabajadores').textContent = 'Employees';
@@ -177,8 +178,9 @@
         document.getElementById('banner-text').textContent = 'Payroll Management';
 
         // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
+        document.getElementById('ajustes-title').textContent = 'Payroll History Query';
+        document.getElementById('ajustes-description').textContent = 'To query the payroll history, we will need to select whether by person or by department.';
+        document.getElementById('ajustes-description-1').textContent = 'Finally, to perform the query, we will need to select the department or employee name.';
       }
     }
   </script>
@@ -238,10 +240,12 @@
   </div>
 
   <div id="content">
-    <h2 id="ajustes-title"></h2>
-    <p id="ajustes-description"></p>
+    <h2 id="ajustes-title">Consulta Historico Nominas</h2>
+    <p id="ajustes-description">Para Consultar el Historico de nominas tendremos que selecionar si por persona o por departamento</p>
       <div class="image-container">
-        <img src="../images/CHNomina.png" width="1200" height="700">
+        <img src="../images/3.png" width="1200" height="400">
+        <p id="ajustes-description-1">Por utltimo para poder ahcer la consulta tendremos que selecionar el nombre del departamento o empleado</p>
+        <img src="../images/CoHNomina.png" width="1200" height="700">
       </div>
     </div>  
 </body>

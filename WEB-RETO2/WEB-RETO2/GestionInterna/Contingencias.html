@@ -147,10 +147,17 @@
         document.getElementById('nav-ajustes-basededatos').textContent = 'Base de Datos';
 
         document.getElementById('banner-text').textContent = 'Gestión Nóminas';
+        document.getElementById('text-add-contingency').textContent = 'Añadir Contingencia';
+        document.getElementById('text-edit-contingency').textContent = 'Modificar Contingencia';
+        document.getElementById('text-view-contingency').textContent = 'Consultar Contingencia';
+        document.getElementById('text-delete-contingency').textContent = 'Eliminar Contingencia';
 
-        // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
+        document.getElementById('ajustes-title').textContent = 'Gestión de Contingencias';
+          document.getElementById('ajustes-description').textContent = 'En esta sección puedes gestionar las contingencias.';
+          document.getElementById('text-add-contingency').textContent = 'Añadir Contingencia - Permite agregar una nueva contingencia al sistema. Requiere rellenar los campos correspondientes.';
+          document.getElementById('text-edit-contingency').textContent = 'Modificar Contingencia - Permite seleccionar una contingencia existente y modificar sus campos.';
+          document.getElementById('text-view-contingency').textContent = 'Consultar Contingencia - Permite visualizar la información detallada de una contingencia existente.';
+          document.getElementById('text-delete-contingency').textContent = 'Eliminar Contingencia - Permite eliminar una contingencia del sistema. Requiere seleccionar el elemento correspondiente.';
       } else if (idioma === 'en') {
         document.getElementById('navbar-inicio').textContent = 'Home';
         document.getElementById('nav-trabajadores').textContent = 'Employees';
@@ -179,10 +186,18 @@
         document.getElementById('nav-ajustes-basededatos').textContent = 'Database';
 
         document.getElementById('banner-text').textContent = 'Payroll Management';
+        document.getElementById('ajustes-title').textContent = 'Contingency Management';
+
+        document.getElementById('ajustes-description').textContent = 'In this section, you can manage contingencies.';
+        document.getElementById('text-add-contingency').textContent = 'Add Contingency - Allows you to add a new contingency to the system. Requires filling in the corresponding fields.';
+        document.getElementById('text-edit-contingency').textContent = 'Edit Contingency - Allows you to select an existing contingency and modify its fields.';
+        document.getElementById('text-view-contingency').textContent = 'View Contingency - Allows you to view detailed information about an existing contingency.';
+        document.getElementById('text-delete-contingency').textContent = 'Delete Contingency - Allows you to remove a contingency from the system. Requires selecting the corresponding item.';
+
 
         // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
+        document.getElementById('ajustes-title').textContent = 'Contingency Management';
+        document.getElementById('ajustes-description').textContent = 'In this section, you can manage the system contingencies. Perform various actions to efficiently manage the existing contingencies.';
       }
     }
   </script>
@@ -242,16 +257,19 @@
   </div>
 
   <div id="content">
-    <h2 id="ajustes-title"></h2>
-    <p id="ajustes-description"></p>
-      <div class="image-container">
-        <img src="../images/OContingencias.png" width="1200" height="700">
-        <div class="image-text">Añadir Contingencia</div>
-        <img src="../images/CrContingecia.png" width="1200" height="700">
-        <img src="../images/MoContingecia.png" width="1200" height="700">
-        <img src="../images/ConContingencia.png" width="1200" height="700">      
-        <img src="../images/ElContingecia.png" width="1200" height="700">      
-      </div>
-    </div>  
+    <h2 id="ajustes-title">Gestion Contingencias</h2>
+    <p id="ajustes-description">En esta sección puedes gestionar las contingencias.</p>
+    <div class="image-container">
+      <img id="img-add-contingency" src="../images/OContingencias.png" width="1200" height="700">
+      <div id="text-add-contingency" class="image-text">Añadir Contingencia - Permite agregar una nueva contingencia al sistema. Requiere rellenar los campos correspondientes.</div>
+      <img id="img-edit-contingency" src="../images/CrContingecia.png" width="1200" height="700">
+      <div id="text-edit-contingency" class="image-text">Modificar Contingencia - Permite seleccionar una contingencia existente y modificar sus campos.</div>
+      <img id="img-view-contingency" src="../images/MoContingecia.png" width="1200" height="700">
+      <div id="text-view-contingency" class="image-text">Consultar Contingencia - Permite visualizar la información detallada de una contingencia existente.</div>
+      <img id="img-delete-contingency" src="../images/ConContingencia.png" width="1200" height="700">
+      <div id="text-delete-contingency" class="image-text">Eliminar Contingencia - Permite eliminar una contingencia del sistema. Requiere seleccionar el elemento correspondiente.</div>
+    </div>
+    </div>
 </body>
 </html>
+

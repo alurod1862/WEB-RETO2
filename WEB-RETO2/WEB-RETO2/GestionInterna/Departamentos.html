@@ -113,79 +113,94 @@
     padding: 10px;
   }
   </style>
-  <script>
-    function cambiarIdioma(idioma) {
-      var htmlElement = document.querySelector('html');
-      htmlElement.lang = idioma;
+ <script>
+  function cambiarIdioma(idioma) {
+    var htmlElement = document.querySelector('html');
+    htmlElement.lang = idioma;
 
-      // Traducir elementos de la barra de navegación
-      if (idioma === 'es') {
-        document.getElementById('navbar-inicio').textContent = 'Inicio';
-        document.getElementById('nav-trabajadores').textContent = 'Trabajadores';
-        document.getElementById('nav-trabajadores-crear').textContent = 'Crear';
-        document.getElementById('nav-trabajadores-eliminar').textContent = 'Eliminar';
-        document.getElementById('nav-trabajadores-consultar').textContent = 'Consultar';
-        document.getElementById('nav-trabajadores-modificar').textContent = 'Modificar';
+    // Traducir elementos de la barra de navegación
+    if (idioma === 'es') {
+      document.getElementById('navbar-inicio').textContent = 'Inicio';
+      document.getElementById('nav-trabajadores').textContent = 'Trabajadores';
+      document.getElementById('nav-trabajadores-crear').textContent = 'Crear';
+      document.getElementById('nav-trabajadores-eliminar').textContent = 'Eliminar';
+      document.getElementById('nav-trabajadores-consultar').textContent = 'Consultar';
+      document.getElementById('nav-trabajadores-modificar').textContent = 'Modificar';
 
-        document.getElementById('nav-calcular-nomina').textContent = 'Nómina';
-        document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calcular';
-        document.getElementById('nav-calcular-nomina-consultar').textContent = 'Consultar';
-        document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Eliminar';
+      document.getElementById('nav-calcular-nomina').textContent = 'Nómina';
+      document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calcular';
+      document.getElementById('nav-calcular-nomina-consultar').textContent = 'Consultar';
+      document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Eliminar';
 
-        document.getElementById('nav-consultar-historico').textContent = 'Histórico Nómina';
-        document.getElementById('nav-consultar-historico-crear').textContent = 'Crear';
-        document.getElementById('nav-consultar-historico-consultar').textContent = 'Consultar';
+      document.getElementById('nav-consultar-historico').textContent = 'Histórico Nómina';
+      document.getElementById('nav-consultar-historico-crear').textContent = 'Crear';
+      document.getElementById('nav-consultar-historico-consultar').textContent = 'Consultar';
 
-        document.getElementById('nav-gestion-interna').textContent = 'Gestión Interna';
-        document.getElementById('nav-gestion-interna-departamento').textContent = 'Departamento';
-        document.getElementById('nav-gestion-interna-percepciones').textContent = 'Percepciones';
-        document.getElementById('nav-gestion-interna-contingencias').textContent = 'Contingencias';
-        document.getElementById('nav-gestion-interna-retenciones').textContent = 'Retenciones';
+      document.getElementById('nav-gestion-interna').textContent = 'Gestión Interna';
+      document.getElementById('nav-gestion-interna-departamento').textContent = 'Departamento';
+      document.getElementById('nav-gestion-interna-percepciones').textContent = 'Percepciones';
+      document.getElementById('nav-gestion-interna-contingencias').textContent = 'Contingencias';
+      document.getElementById('nav-gestion-interna-retenciones').textContent = 'Retenciones';
 
-        document.getElementById('nav-ajustes').textContent = 'Ajustes';
-        document.getElementById('nav-ajustes-idioma').textContent = 'Idioma';
-        document.getElementById('nav-ajustes-basededatos').textContent = 'Base de Datos';
+      document.getElementById('nav-ajustes').textContent = 'Ajustes';
+      document.getElementById('nav-ajustes-idioma').textContent = 'Idioma';
+      document.getElementById('nav-ajustes-basededatos').textContent = 'Base de Datos';
 
-        document.getElementById('banner-text').textContent = 'Gestión Nóminas';
+      document.getElementById('banner-text').textContent = 'Gestión Nóminas';
 
-        // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
-      } else if (idioma === 'en') {
-        document.getElementById('navbar-inicio').textContent = 'Home';
-        document.getElementById('nav-trabajadores').textContent = 'Employees';
-        document.getElementById('nav-trabajadores-crear').textContent = 'Create';
-        document.getElementById('nav-trabajadores-eliminar').textContent = 'Delete';
-        document.getElementById('nav-trabajadores-consultar').textContent = 'View';
-        document.getElementById('nav-trabajadores-modificar').textContent = 'Modify';
+      // Traducción del contenido principal
+      document.getElementById('ajustes-title').textContent = 'Gestión Departamentos';
+      document.getElementById('ajustes-description').textContent = 'En esta sección puedes gestionar los departamentos.';
+      document.getElementById('ajustes-title').textContent = 'Gestión Departamentos';
+      document.getElementById('ajustes-description').textContent = 'En esta sección puedes gestionar los departamentos.';
 
-        document.getElementById('nav-calcular-nomina').textContent = 'Payroll';
-        document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calculate';
-        document.getElementById('nav-calcular-nomina-consultar').textContent = 'View';
-        document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Delete';
+      document.getElementById('text-create-department').textContent = 'Crear Departamento - Permite crear un nuevo departamento en el sistema. Debes completar los campos correspondientes.';
+      document.getElementById('text-delete-department').textContent = 'Eliminar Departamento - Permite eliminar un departamento del sistema. Debes seleccionar el departamento correspondiente.';
+      document.getElementById('text-modify-department').textContent = 'Modificar Departamento - Permite seleccionar y modificar un departamento existente en el sistema.';
+      document.getElementById('text-view-department').textContent = 'Consultar Departamento - Permite visualizar la información detallada de un departamento existente.';
+    } else if (idioma === 'en') {
+      document.getElementById('navbar-inicio').textContent = 'Home';
+      document.getElementById('nav-trabajadores').textContent = 'Employees';
+      document.getElementById('nav-trabajadores-crear').textContent = 'Create';
+      document.getElementById('nav-trabajadores-eliminar').textContent = 'Delete';
+      document.getElementById('nav-trabajadores-consultar').textContent = 'View';
+      document.getElementById('nav-trabajadores-modificar').textContent = 'Modify';
 
-        document.getElementById('nav-consultar-historico').textContent = 'Payroll History';
-        document.getElementById('nav-consultar-historico-crear').textContent = 'Create';
-        document.getElementById('nav-consultar-historico-consultar').textContent = 'View';
+      document.getElementById('nav-calcular-nomina').textContent = 'Payroll';
+      document.getElementById('nav-calcular-nomina-calcular').textContent = 'Calculate';
+      document.getElementById('nav-calcular-nomina-consultar').textContent = 'View';
+      document.getElementById('nav-calcular-nomina-eliminar').textContent = 'Delete';
 
-        document.getElementById('nav-gestion-interna').textContent = 'Internal Management';
-        document.getElementById('nav-gestion-interna-departamento').textContent = 'Department';
-        document.getElementById('nav-gestion-interna-percepciones').textContent = 'Perceptions';
-        document.getElementById('nav-gestion-interna-contingencias').textContent = 'Contingencies';
-        document.getElementById('nav-gestion-interna-retenciones').textContent = 'Deductions';
+      document.getElementById('nav-consultar-historico').textContent = 'Payroll History';
+      document.getElementById('nav-consultar-historico-crear').textContent = 'Create';
+      document.getElementById('nav-consultar-historico-consultar').textContent = 'View';
 
-        document.getElementById('nav-ajustes').textContent = 'Settings';
-        document.getElementById('nav-ajustes-idioma').textContent = 'Language';
-        document.getElementById('nav-ajustes-basededatos').textContent = 'Database';
+      document.getElementById('nav-gestion-interna').textContent = 'Internal Management';
+      document.getElementById('nav-gestion-interna-departamento').textContent = 'Department';
+      document.getElementById('nav-gestion-interna-percepciones').textContent = 'Perceptions';
+      document.getElementById('nav-gestion-interna-contingencias').textContent = 'Contingencies';
+      document.getElementById('nav-gestion-interna-retenciones').textContent = 'Deductions';
 
-        document.getElementById('banner-text').textContent = 'Payroll Management';
+      document.getElementById('nav-ajustes').textContent = 'Settings';
+      document.getElementById('nav-ajustes-idioma').textContent = 'Language';
+      document.getElementById('nav-ajustes-basededatos').textContent = 'Database';
 
-        // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
-      }
+      document.getElementById('banner-text').textContent = 'Payroll Management';
+
+      // Traducción del contenido principal
+      document.getElementById('ajustes-title').textContent = 'Department Management';
+      document.getElementById('ajustes-description').textContent = 'In this section, you can manage the departments.';
+      document.getElementById('ajustes-title').textContent = 'Department Management';
+      document.getElementById('ajustes-description').textContent = 'In this section, you can manage the departments.';
+
+      document.getElementById('text-create-department').textContent = 'Create Department - Allows creating a new department in the system. You must fill in the corresponding fields.';
+      document.getElementById('text-delete-department').textContent = 'Delete Department - Allows deleting a department from the system. You must select the corresponding department.';
+      document.getElementById('text-modify-department').textContent = 'Modify Department - Allows selecting and modifying an existing department in the system.';
+      document.getElementById('text-view-department').textContent = 'View Department - Allows viewing detailed information of an existing department.';
     }
-  </script>
+    }
+</script>
+
 </head>
 <body>
   <div id="banner">
@@ -242,19 +257,20 @@
   </div>
 
   <div id="content">
-    <h2 id="ajustes-title">Gestion Departamentos</h2>
-    <p id="ajustes-description">Gestion de los Departamentos</p>
-      <div class="image-container">
-        <img src="../images/ODepartamentos.png" width="1200" height="700">
-        <div class="image-text">Crear Departamento</div>
-        <img src="../images/CD.png" width="1200" height="700">
-        <div class="image-text">Eliminar Departamento</div>
-        <img src="../images/CD.png" width="1200" height="700">
-        <div class="image-text">Modificar Departamento</div>
-        <img src="../images/MD.png" width="1200" height="700">
-        <div class="image-text">Eliminar Departamento</div>
-        <img src="../images/ED.png" width="1200" height="700">
-      </div>
-    </div>  
+    <h2 id="ajustes-title">Gestión Departamentos</h2>
+    <p id="ajustes-description">En esta sección puedes gestionar los departamentos.</p>
+    <div class="image-container">
+      <img id="img-create-department" src="../images/ODepartamentos.png" width="1200" height="700">
+      <div id="text-create-department" class="image-text">Crear Departamento - Permite crear un nuevo departamento en el sistema. Debes completar los campos correspondientes.</div>
+      <img id="img-delete-department" src="../images/CD.png" width="1200" height="700">
+      <div id="text-delete-department" class="image-text">Eliminar Departamento - Permite eliminar un departamento del sistema. Debes seleccionar el departamento correspondiente.</div>
+      <img id="img-modify-department" src="../images/ED.png" width="1200" height="700">
+      <div id="text-modify-department" class="image-text">Modificar Departamento - Permite seleccionar y modificar un departamento existente en el sistema.</div>
+      <img id="img-view-department" src="../images/MD.png" width="1200" height="700">
+      <div id="text-view-department" class="image-text">Consultar Departamento - Permite visualizar la información detallada de un departamento existente.</div>
+      <img id="img-consult-department" src="../images/COD.png" width="1200" height="700">
+    </div>
+  </div>
+  
 </body>
 </html>

@@ -145,8 +145,9 @@
         document.getElementById('banner-text').textContent = 'Gestión Nóminas';
 
         // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
+        document.getElementById('ajustes-title').textContent = 'Consultar Nomina';
+        document.getElementById('ajustes-description').textContent = 'Para consultar nominas lo podemos hacer por empleado,departamento o todas las nominas';
+        document.getElementById('image-text-1').textContent = 'Para ello tenemos que selecionar que nomina queremos consultar y nos mostrara los datos de la misma';
       } else if (idioma === 'en') {
         document.getElementById('navbar-inicio').textContent = 'Home';
         document.getElementById('nav-trabajadores').textContent = 'Employees';
@@ -177,8 +178,9 @@
         document.getElementById('banner-text').textContent = 'Payroll Management';
 
         // Traducción del contenido principal
-        document.getElementById('ajustes-title').textContent = '';
-        document.getElementById('ajustes-description').textContent = '';
+        document.getElementById('ajustes-title').textContent = 'View Payroll';
+        document.getElementById('ajustes-description').textContent = 'To View the payroll, you can do it by employee, department, or all. Select what you want to View.';
+        document.getElementById('image-text-1').textContent = 'To do this, we need to select which payroll we want to consult, and it will display the data for that payrol';
       }
     }
   </script>
@@ -238,11 +240,12 @@
   </div>
 
   <div id="content">
-    <h2 id="ajustes-title"></h2>
-    <p id="ajustes-description"></p>
+    <h2 id="ajustes-title">Consultar Nomina</h2>
+    <p id="ajustes-description">Para consultar nominas lo podemos hacer por empleado,departamento o todas las nominas</p>
       <div class="image-container">
         <img src="../images/CoNomina.png" width="1200" height="700">
-        <img src="../images/" width="1200" height="700">
+        <div id="image-text-1" class="image-text">Para ello tenemos que selecionar que nomina queremos consultar y nos mostrara los datos de la misma</div>
+        <img src="../images/1.png" width="1200" height="700">
       </div>
     </div>  
 </body>

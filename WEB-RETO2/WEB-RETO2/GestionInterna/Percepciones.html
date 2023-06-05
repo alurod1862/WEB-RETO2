@@ -197,7 +197,7 @@
 </head>
 <body>
   <div id="banner">
-    <h1 id="banner-text">Gestión Nóminas</h1>
+    <h1 id="banner-text">Payroll Management</h1>
     <div id="language-buttons">
       <button onclick="cambiarIdioma('es')">Español</button>
       <button onclick="cambiarIdioma('en')">English</button>
@@ -205,64 +205,65 @@
   </div>
   <div id="navbar">
     <ul>
-      <li><a id="navbar-inicio" href="../index.html">Inicio</a></li>
+      <li><a id="navbar-inicio" href="../index.html">Home</a></li>
       <li class="dropdown">
-        <a href="../Trabajador/trabajadores.html" id="nav-trabajadores">Trabajadores</a>
+        <a href="../Trabajador/trabajadores.html" id="nav-trabajadores">Employees</a>
         <div class="dropdown-content">
-          <a href="../Trabajador/crearTrabajador.html" id="nav-trabajadores-crear">Crear</a>
-          <a href="../Trabajador/eliminarTrabajador.html" id="nav-trabajadores-eliminar">Eliminar</a>
-          <a href="../Trabajador/consultarTrabajador.html" id="nav-trabajadores-consultar">Consultar</a>
-          <a href="../Trabajador/modificarTrabajador.html" id="nav-trabajadores-modificar">Modificar</a>
+          <a href="../Trabajador/crearTrabajador.html" id="nav-trabajadores-crear">Create</a>
+          <a href="../Trabajador/eliminarTrabajador.html" id="nav-trabajadores-eliminar">Delete</a>
+          <a href="../Trabajador/consultarTrabajador.html" id="nav-trabajadores-consultar">Consult</a>
+          <a href="../Trabajador/modificarTrabajador.html" id="nav-trabajadores-modificar">Modify</a>
         </div>
       </li>
       <li class="dropdown">
-        <a href="../Nomina/nomina.html" id="nav-calcular-nomina">Nómina</a>
+        <a href="../Nomina/nomina.html" id="nav-calcular-nomina">Payroll</a>
         <div class="dropdown-content">
-          <a href="../Nomina/calcularNomina.html" id="nav-calcular-nomina-calcular">Calcular</a>
-          <a href="../Nomina/consultarNomina.html" id="nav-calcular-nomina-consultar">Consultar</a>
-          <a href="../Nomina/eliminarNomina.html" id="nav-calcular-nomina-eliminar">Eliminar</a>
+          <a href="../Nomina/calcularNomina.html" id="nav-calcular-nomina-calcular">Calculate</a>
+          <a href="../Nomina/consultarNomina.html" id="nav-calcular-nomina-consultar">Consult</a>
+          <a href="../Nomina/eliminarNomina.html" id="nav-calcular-nomina-eliminar">Delete</a>
         </div>
       </li>
       <li class="dropdown">
-        <a href="../Historico/historico.html" id="nav-consultar-historico">Histórico Nómina</a>
+        <a href="../Historico/historico.html" id="nav-consultar-historico">Payroll History</a>
         <div class="dropdown-content">
-          <a href="../Historico/crearHistorico.html" id="nav-consultar-historico-crear">Crear</a>
-          <a href="../Historico/consultarHistorico.html" id="nav-consultar-historico-consultar">Consultar</a>
+          <a href="../Historico/crearHistorico.html" id="nav-consultar-historico-crear">Create</a>
+          <a href="../Historico/consultarHistorico.html" id="nav-consultar-historico-consultar">Consult</a>
         </div>
       </li>
       <li class="dropdown">
-        <a href="../GestionInterna/gestion-interna.html" id="nav-gestion-interna">Gestión Interna</a>
+        <a href="../GestionInterna/gestion-interna.html" id="nav-gestion-interna">Internal Management</a>
         <div class="dropdown-content">
-          <a href="../GestionInterna/Departamentos.html" id="nav-gestion-interna-departamento">Departamento</a>
-          <a href="../GestionInterna/Percepciones.html" id="nav-gestion-interna-percepciones">Percepciones</a>
-          <a href="../GestionInterna/Contingencias.html" id="nav-gestion-interna-contingencias">Contingencias</a>
-          <a href="../GestionInterna/Reteneciones.html" id="nav-gestion-interna-retenciones">Retenciones</a>
+          <a href="../GestionInterna/Departamentos.html" id="nav-gestion-interna-departamento">Departments</a>
+          <a href="../GestionInterna/Percepciones.html" id="nav-gestion-interna-percepciones">Perceptions</a>
+          <a href="../GestionInterna/Contingencias.html" id="nav-gestion-interna-contingencias">Contingencies</a>
+          <a href="../GestionInterna/Reteneciones.html" id="nav-gestion-interna-retenciones">Deductions</a>
         </div>
       </li>
       <li class="dropdown">
-        <a href="../Ajustes/ajustes.html" id="nav-ajustes">Ajustes</a>
+        <a href="../Ajustes/ajustes.html" id="nav-ajustes">Settings</a>
         <div class="dropdown-content">
-          <a  href="../Ajustes/Idioma.html" id="nav-ajustes-idioma" >Idioma</a>
-          <a href="../Ajustes/BBDD.html" id="nav-ajustes-basededatos">Base de Datos</a>
+          <a  href="../Ajustes/Idioma.html" id="nav-ajustes-idioma" >Language</a>
+          <a href="../Ajustes/BBDD.html" id="nav-ajustes-basededatos">Database</a>
         </div>
       </li>
     </ul>
   </div>
   <div id="content">
-    <h2 id="ajustes-title">Gestión de Percepciones</h2>
-    <p id="ajustes-description">Gestionar Percepciones</p>
+    <h2 id="ajustes-title">Perception Management</h2>
+    <p id="ajustes-description">In this section, you can manage perceptions.</p>
     <div class="image-container">
       <img src="../images/OPercepciones.png" width="1200" height="700">
-      <div class="image-text" id="text-add-contingency">Añadir Percepción - Permite agregar una nueva percepción al sistema. Requiere rellenar los campos correspondientes.</div>
+      <div class="image-text" id="text-add-contingency">Add Perception - Allows you to add a new perception to the system. You need to fill in the corresponding fields.</div>
       <img src="../images/AP.png" width="1200" height="700">
-      <div class="image-text" id="text-view-contingency">Consultar Percepción - Permite visualizar la información detallada de una percepción existente.</div>
+      <div class="image-text" id="text-view-contingency">View Perception - Allows you to view detailed information about an existing perception.</div>
       <img src="../images/CP.png" width="1200" height="700">
-      <div class="image-text" id="text-edit-contingency">Modificar Percepción - Permite seleccionar una percepción existente y modificar sus campos.</div>
+      <div class="image-text" id="text-edit-contingency">Modify Perception - Allows you to select an existing perception and modify its fields.</div>
       <img src="../images/MP.png" width="1200" height="700">
-      <div class="image-text" id="text-delete-contingency">Eliminar Percepción - Permite eliminar una percepción del sistema. Requiere seleccionar el elemento correspondiente.</div>
+      <div class="image-text" id="text-delete-contingency">Delete Perception - Allows you to delete a perception from the system. You need to select the corresponding item.</div>
       <img src="../images/EP.png" width="1200" height="700">
     </div>
   </div>
   
 </body>
+
 </html>

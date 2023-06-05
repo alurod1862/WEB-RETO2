@@ -187,7 +187,7 @@
 </head>
 <body>
   <div id="banner">
-    <h1 id="banner-text">Gestión Nóminas</h1>
+    <h1 id="banner-text">Payroll Management</h1>
     <div id="language-buttons">
       <button onclick="cambiarIdioma('es')">Español</button>
       <button onclick="cambiarIdioma('en')">English</button>
@@ -196,54 +196,56 @@
 
   <div id="navbar">
     <ul>
-      <li><a id="navbar-inicio" href="../index.html">Inicio</a></li>
+      <li><a id="navbar-inicio" href="../index.html">Home</a></li>
       <li class="dropdown">
-        <a href="../Trabajador/trabajadores.html" id="nav-trabajadores">Trabajadores</a>
+        <a href="../Trabajador/trabajadores.html" id="nav-trabajadores">Employees</a>
         <div class="dropdown-content">
-          <a href="../Trabajador/crearTrabajador.html" id="nav-trabajadores-crear">Crear</a>
-          <a href="../Trabajador/eliminarTrabajador.html" id="nav-trabajadores-eliminar">Eliminar</a>
-          <a href="../Trabajador/consultarTrabajador.html" id="nav-trabajadores-consultar">Consultar</a>
-          <a href="../Trabajador/modificarTrabajador.html" id="nav-trabajadores-modificar">Modificar</a>
+          <a href="../Trabajador/crearTrabajador.html" id="nav-trabajadores-crear">Create</a>
+          <a href="../Trabajador/eliminarTrabajador.html" id="nav-trabajadores-eliminar">Delete</a>
+          <a href="../Trabajador/consultarTrabajador.html" id="nav-trabajadores-consultar">Consult</a>
+          <a href="../Trabajador/modificarTrabajador.html" id="nav-trabajadores-modificar">Modify</a>
         </div>
       </li>
       <li class="dropdown">
-        <a href="nomina.html" id="nav-calcular-nomina">Nómina</a>
+        <a href="nomina.html" id="nav-calcular-nomina">Payroll</a>
         <div class="dropdown-content">
-          <a href="calcularNomina.html" id="nav-calcular-nomina-calcular">Calcular</a>
-          <a href="consultarNomina.html" id="nav-calcular-nomina-consultar">Consultar</a>
-          <a href="eliminarNomina.html" id="nav-calcular-nomina-eliminar">Eliminar</a>
+          <a href="calcularNomina.html" id="nav-calcular-nomina-calcular">Calculate</a>
+          <a href="consultarNomina.html" id="nav-calcular-nomina-consultar">Consult</a>
+          <a href="eliminarNomina.html" id="nav-calcular-nomina-eliminar">Delete</a>
         </div>
       </li>
       <li class="dropdown">
-        <a href="../Historico/historico.html" id="nav-consultar-historico">Histórico Nómina</a>
+        <a href="../Historico/historico.html" id="nav-consultar-historico">Payroll History</a>
         <div class="dropdown-content">
-          <a href="../Historico/crearHistorico.html" id="nav-consultar-historico-crear">Crear</a>
-          <a href="../Historico/consultarHistorico.html" id="nav-consultar-historico-consultar">Consultar</a>
+          <a href="../Historico/crearHistorico.html" id="nav-consultar-historico-crear">Create</a>
+          <a href="../Historico/consultarHistorico.html" id="nav-consultar-historico-consultar">Consult</a>
         </div>
       </li>
       <li class="dropdown">
-        <a href="../GestionInterna/gestion-interna.html" id="nav-gestion-interna">Gestión Interna</a>
+        <a href="../GestionInterna/gestion-interna.html" id="nav-gestion-interna">Internal Management</a>
         <div class="dropdown-content">
-          <a href="../GestionInterna/Departamentos.html" id="nav-gestion-interna-departamento">Departamento</a>
-          <a href="../GestionInterna/Percepciones.html" id="nav-gestion-interna-percepciones">Percepciones</a>
-          <a href="../GestionInterna/Contingencias.html" id="nav-gestion-interna-contingencias">Contingencias</a>
-          <a href="../GestionInterna/Reteneciones.html" id="nav-gestion-interna-retenciones">Retenciones</a>
+          <a href="../GestionInterna/Departamentos.html" id="nav-gestion-interna-departamento">Departments</a>
+          <a href="../GestionInterna/Percepciones.html" id="nav-gestion-interna-percepciones">Perceptions</a>
+          <a href="../GestionInterna/Contingencias.html" id="nav-gestion-interna-contingencias">Contingencies</a>
+          <a href="../GestionInterna/Reteneciones.html" id="nav-gestion-interna-retenciones">Deductions</a>
         </div>
       </li>
       <li class="dropdown">
-        <a href="../Ajustes/ajustes.html" id="nav-ajustes">Ajustes</a>
+        <a href="../Ajustes/ajustes.html" id="nav-ajustes">Settings</a>
         <div class="dropdown-content">
-          <a  href="../Ajustes/Idioma.html" id="nav-ajustes-idioma" >Idioma</a>
-          <a href="../Ajustes/BBDD.html" id="nav-ajustes-basededatos">Base de Datos</a>
+          <a  href="../Ajustes/Idioma.html" id="nav-ajustes-idioma" >Language</a>
+          <a href="../Ajustes/BBDD.html" id="nav-ajustes-basededatos">Database</a>
         </div>
       </li>
     </ul>
   </div>
   <div id="content">
-    <h2 id="calcular-nomina-title">Nómina</h2>
-    <p id="calcular-nomina-description">En la sección "Nómina" podrás realizar el cálculo de las nóminas de los trabajadores. Aquí encontrarás herramientas y opciones para ingresar los datos necesarios y obtener los cálculos correspondientes a las nóminas de los empleados.Ademas podras consultar las nominas existentes y eliminarlas.</p>
+    <h2 id="calcular-nomina-title">Payroll</h2>
+    <p id="calcular-nomina-description">In the "Payroll" section, you can calculate employee payrolls. Here you will find tools and options to enter the necessary data and obtain the corresponding calculations for employee payrolls. You can also consult existing payrolls and delete them.</p>
     <div class="image-container">
       <img src="../images/Nominas.png" width="1200" height="700">
     </div>
+  </div>
 </body>
+
 </html>
